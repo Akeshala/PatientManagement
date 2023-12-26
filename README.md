@@ -9,7 +9,7 @@ Setup
 
 AWS
 
-Create s3
-Create Cognito Identity Pool
-Create IAM Role to read S3
-Create CloudFront and connect with S3
+1. Create s3
+2. Create Cognito Identity Pool
+3. Create IAM Role to read S3
+4. Create CloudFront and connect with S3
