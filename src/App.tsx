@@ -24,8 +24,6 @@ function App() {
     client.send(command).then(({ Contents }) => setObjects(Contents || []));
   }, []);
 
-  console.log(objects)
-
   return (
     <div className="App">
       <h1>{"Patient Images"}</h1>
