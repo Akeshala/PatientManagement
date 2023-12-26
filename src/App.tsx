@@ -31,7 +31,7 @@ function App() {
         {objects.map((o, index) => (
             <img
                 key={index}
-                src={`https://patientmanagement48.s3.ap-south-1.amazonaws.com/${o.Key}`}
+                src={`https://d38szn9sft31h5.cloudfront.net/${o.Key}`}
                 alt={`Image ${index}`}
                 style={{ width: '200px', height: 'auto', margin: '5px' }}
             />
