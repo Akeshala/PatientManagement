@@ -14,13 +14,13 @@ function App() {
 
   useEffect(() => {
     const client = new S3Client({
-      region: "ap-south-1",
+      region: "us-east-2",
       credentials: fromCognitoIdentityPool({
-        clientConfig: { region: "ap-south-1" },
-        identityPoolId: "ap-south-1:45014573-1687-44d7-9881-f22fe555c01b",
+        clientConfig: { region: "us-east-2" },
+        identityPoolId: "us-east-2:45014573-1687-44d7-9881-f22fe555c01b",
       }),
     });
-    const command = new ListObjectsCommand({ Bucket: "patientmanagement48" });
+    const command = new ListObjectsCommand({ Bucket: "patientmanagement89" });
     client.send(command).then(({ Contents }) => setObjects(Contents || []));
   }, []);
 
