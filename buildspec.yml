@@ -5,10 +5,14 @@ phases:
     runtime-versions:
       nodejs: 18
     commands:
-      - npm install
+      - npm ci
   build:
     commands:
       - npm run build
   post_build:
     commands:
       - aws s3 cp ./build s3://patientmanagement48 --recursive
+
+cache:
+  paths:
+    - node_modules
