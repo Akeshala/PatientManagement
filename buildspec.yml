@@ -16,3 +16,7 @@ phases:
 cache:
   paths:
     - node_modules
+
+artifacts:
+  files:
+    - '**/*'
