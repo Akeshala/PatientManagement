@@ -2,14 +2,7 @@ import "./App.css";
 
 function App() {
 
-  const images = [
-    'https://patientmanagement89.s3.us-east-2.amazonaws.com/image1.jpeg',
-    'https://patientmanagement89.s3.us-east-2.amazonaws.com/image2.jpeg',
-    'https://patientmanagement89.s3.us-east-2.amazonaws.com/image3.jpeg',
-    'https://patientmanagement89.s3.us-east-2.amazonaws.com/image4.webp',
-  ];
-
-
+  const images = ['image1.jpeg', 'image2.jpeg', 'image3.jpeg', 'image4.webp'];
   return (
     <div className="App">
       <h1>{"Wildlife Photography"}</h1>
@@ -17,7 +10,7 @@ function App() {
         {images.map((image, index) => (
             <img
                 key={index}
-                src={image}
+                src={`https://d1da5ij22hqcih.cloudfront.net/${image}`}
                 alt={`Image ${index}`}
                 style={{ width: 'auto', height: '150px', margin: '10px' }}
             />
