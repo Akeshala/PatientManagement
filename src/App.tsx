@@ -20,7 +20,7 @@ function App() {
         identityPoolId: "us-east-2:15c170ed-a0ab-46ed-a333-42c1d4b0303e",
       }),
     });
-    const command = new ListObjectsCommand({ Bucket: "patientmanagement95" });
+    const command = new ListObjectsCommand({ Bucket: "patientmanagement89" });
     client.send(command).then(({ Contents }) => setObjects(Contents || []));
   }, []);
 
