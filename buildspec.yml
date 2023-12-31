@@ -19,4 +19,5 @@ cache:
 
 artifacts:
   files:
-    - '**/*' 
+    - '**/*'
+  base-directory: 'dist'
