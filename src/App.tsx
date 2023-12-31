@@ -17,7 +17,7 @@ function App() {
       region: "us-east-2",
       credentials: fromCognitoIdentityPool({
         clientConfig: { region: "us-east-2" },
-        identityPoolId: "us-east-2:45014573-1687-44d7-9881-f22fe555c01b",
+        identityPoolId: "us-east-2:15c170ed-a0ab-46ed-a333-42c1d4b0303e",
       }),
     });
     const command = new ListObjectsCommand({ Bucket: "patientmanagement95" });
@@ -31,7 +31,7 @@ function App() {
         {objects.map((o, index) => (
             <img
                 key={index}
-                src={`https://d38szn9sft31h5.cloudfront.net/${o.Key}`}
+                src={`https://d1da5ij22hqcih.cloudfront.net/${o.Key}`}
                 alt={`Image ${index}`}
                 style={{ width: '200px', height: 'auto', margin: '5px' }}
             />
