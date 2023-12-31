@@ -12,7 +12,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>{"Wildlife Photography Album"}</h1>
+      <h1>{"Wildlife Photography"}</h1>
       <div>
         {images.map((image, index) => (
             <img
