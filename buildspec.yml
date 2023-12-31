@@ -9,9 +9,6 @@ phases:
   build:
     commands:
       - npm run build
-  post_build:
-    commands:
-      - aws s3 cp dist s3://patientmanagement95 --recursive
 
 cache:
   paths:
