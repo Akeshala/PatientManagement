@@ -6,12 +6,15 @@ phases:
       nodejs: 18
     commands:
       - npm ci
+      - echo "Node module installed"
   build:
     commands:
       - npm run build
+      - echo "NPM build successful"
   post_build:
     commands:
       - aws s3 cp dist s3://patientmanagement95 --recursive
+      - echo "Build files copied to S3 successfully"
 
 cache:
   paths:
