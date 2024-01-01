@@ -10,7 +10,7 @@ function App() {
         {images.map((image: string, index : number) => (
             <img
                 key={index}
-                src={`https://d1tgu70bdghfg5.cloudfront.net/images/${image}`}
+                src={`/${image}`}
                 alt={`Image ${index}`}
                 style={{ width: 'auto', height: '150px', margin: '10px' }}
             />
