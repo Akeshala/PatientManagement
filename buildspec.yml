@@ -7,6 +7,8 @@ phases:
     commands:
       - npm ci
       - echo "Node module installed"
+  pre_build:
+       - export CLOUDFRONT_ID="YOUR_CLOUDFRONT_DISTRIBUTION_ID"
   build:
     commands:
       - npm run build
@@ -15,7 +17,8 @@ phases:
     commands:
       - aws s3 cp dist s3://deploybucketwildlife95 --recursive
       - echo "Build files copied to S3 successfully"
-      - aws cloudfront create-invalidation --distribution-id E1BK93Y8W6UO14 --paths "/*"
+      - echo "CloudFront ID: $CLOUDFRONT_ID"
+      - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_ID --paths "/*"
 
 cache:
   paths:
