@@ -15,6 +15,7 @@ phases:
     commands:
       - aws s3 cp dist s3://patientmanagement95 --recursive
       - echo "Build files copied to S3 successfully"
+      - aws cloudfront create-invalidation --distribution-id E1BK93Y8W6UO14 --path  "/*"
 
 cache:
   paths:
