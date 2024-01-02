@@ -9,6 +9,8 @@ phases:
       - echo "Node module installed"
   pre_build:
     commands:
+      - export LIST_C=$(aws cloudfront list-distributions --query "DistributionList.Items[0].Id" --output text)
+      - echo "$LIST_C"
       - export CLOUDFRONT_ID=$(aws cloudfront list-distributions --query "DistributionList.Items[?Origins.Items[?Id == 'deploybucketwildlife95']].Id | [0]" --output text)
       - echo "$CLOUDFRONT_ID"
   build:
