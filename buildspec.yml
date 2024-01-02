@@ -10,6 +10,7 @@ phases:
   pre_build:
     commands:
       - export CLOUDFRONT_ID=$(aws cloudfront list-distributions --query "DistributionList.Items[?Origins.Items[?Id =='deploybucketwildlife95']].Id | [0]" --output text)
+      - echo "$CLOUDFRONT_ID"
   build:
     commands:
       - npm run build
@@ -18,7 +19,6 @@ phases:
     commands:
       - aws s3 cp dist s3://deploybucketwildlife95 --recursive
       - echo "Build files copied to S3 successfully"
-      ##- echo "CloudFront ID: $CLOUDFRONT_ID"
       - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_ID --paths "/*"
 
 cache:
