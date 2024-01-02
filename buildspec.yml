@@ -11,7 +11,7 @@ phases:
     commands:
       - export LIST_C=$(aws cloudfront list-distributions --query "DistributionList.Items[0].Id" --output text)
       - echo "$LIST_C"
-      - export CLOUDFRONT_ID=$(aws cloudfront list-distributions --query "DistributionList.Items[?Origins.Items[?Id == 'deploybucketwildlife95']].Id | [0]" --output text)
+      - export CLOUDFRONT_ID=$(aws cloudfront list-distributions --query "DistributionList.Items[?Origins.Items[?DomainName == 'deploybucketwildlife95.s3.amazonaws.com']].Id | [0]" --output text)
       - echo "$CLOUDFRONT_ID"
   build:
     commands:
