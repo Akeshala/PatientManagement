@@ -13,8 +13,9 @@ phases:
       - echo "NPM build successful"
   post_build:
     commands:
-      - aws s3 cp dist s3://patientmanagement95 --recursive
+      - aws s3 cp dist s3://deploybucketwildlife95 --recursive
       - echo "Build files copied to S3 successfully"
+      - aws cloudfront create-invalidation --distribution-id E1BK93Y8W6UO14 --paths "/*"
 
 cache:
   paths:
