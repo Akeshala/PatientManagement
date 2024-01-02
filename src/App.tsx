@@ -5,7 +5,7 @@ function App() {
   const images: string[] = ['image1.jpeg', 'image2.jpeg', 'image3.jpeg', 'image4.webp'];
   return (
     <div className="App">
-      <h1>{"Wildlife Photography Album"}</h1>
+      <h1>{"Wildlife Photography"}</h1>
         <div>
         <p>
             {"Wildlife photography is an awe-inspiring art form that captures the beauty, behavior, and essence\ " +
