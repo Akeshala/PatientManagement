@@ -17,7 +17,7 @@ phases:
     commands:
       - aws s3 cp dist s3://deploybucketwildlife95 --recursive
       - echo "Build files copied to S3 successfully"
-      - echo "CloudFront ID: $CLOUDFRONT_ID"
+      ##- echo "CloudFront ID: $CLOUDFRONT_ID"
       - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_ID --paths "/*"
 
 cache:
