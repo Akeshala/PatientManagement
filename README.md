@@ -1,4 +1,7 @@
 # PatientManagement (Wildlife Photography)
+
+Project name was changed to Wildlife Photography
+
 ASD CW2
 
 Setup
