@@ -8,6 +8,7 @@ phases:
       - npm ci
       - echo "Node module installed"
   pre_build:
+    commands:
       - export CLOUDFRONT_ID=$(aws cloudfront list-distributions --query "DistributionList.Items[?Origins.Items[?Id =='deploybucketwildlife95']].Id | [0]" --output text)
   build:
     commands:
