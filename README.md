@@ -2,7 +2,7 @@
 
 Project name was changed to Wildlife Photography
 
-ASD CW2
+CCA CW2
 
 Setup
 
